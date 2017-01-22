@@ -1,0 +1,115 @@
+Detailed Files -- Population Electronic Product #45 (PE-45)
+
+File names and size:
+
+The are 8 data files for each State and the District of Columbia.
+The names and size are described below in the record layout
+section.
+
+Brief Description:
+
+These files provides the user with State Population Projections
+for each State and the District of Columbia, every year from 1995
+to 2025, each race/Hispanic origin group by sex, by single year
+of age, for components (birth, deaths, domestic migration, and
+international migration) and for Series A -- the preferred series
+(Time Series Model), and Series B -- the Economic Series.
+
+Detailed Record Layout:
+
+For each of the 50 States and the District of Columbia, there are
+eight ASCII data files.  Basic information about each of these
+files follows:  (NOTE:  In each of the file names, XX represents
+a state's two letter post office abbreviation code.)
+
+XX9500.ASC   State Population Projection Data, 1995 to 2000
+             1032 rows    20 columns     158,928 bytes
+XX0105.ASC   State Population Projection Data, 2001 to 2005
+              860 rows    20 columns     132,440 bytes
+XX0610.ASC   State Population Projection Data, 2006 to 2010
+              860 rows    20 columns     132,440 bytes
+XX1115.ASC   State Population Projection Data, 2011 to 2015
+              860 rows    20 columns     132,440 bytes
+XX1620.ASC   State Population Projection Data, 2016 to 2020
+              860 rows    20 columns     132,440 bytes
+XX2125.ASC   State Population Projection Data, 2021 to 2025
+              860 rows    20 columns     132,440 bytes
+XXBY5.ASC    State Population Projection Data - Every Fifth Year
+             1204 rows    20 columns     185,416 bytes
+XXCOMP.ASC   State Projection Components of Change Data
+              976 rows    12 columns      63,440 bytes
+
+The format for the State Population Projections data files
+follows below:
+
+001 - 002      State Postal Abbreviation Code
+      003      Projection Series Code (A or B)
+004 - 007      Year (1995 to 2025)
+008 - 009      Age (0 to 85)
+010 - 017      Projected White Non-Hispanic Male Population
+018 - 025      Projected White Non-Hispanic Female Population
+026 - 033      Projected White Hispanic Male Population
+034 - 041      Projected White Hispanic Female Population
+042 - 049      Projected Black Non-Hispanic Male Population
+050 - 057      Projected Black Non-Hispanic Female Population
+058 - 065      Projected Black Hispanic Male Population
+066 - 073      Projected Black Hispanic Female Population
+074 - 081      Projected American Indian, Eskimo, and Aleut
+               Non-Hispanic Male Population
+082 - 089      Projected American Indian, Eskimo, and Aleut
+               Non-Hispanic Female Population
+090 - 097      Projected American Indian, Eskimo, and Aleut
+               Hispanic Male Population
+098 - 105      Projected American Indian, Eskimo, and Aleut
+               Hispanic Female Population
+106 - 113      Projected Asian and Pacific Islander
+               Non-Hispanic Male Population
+114 - 121      Projected Asian and Pacific Islander
+               Non-Hispanic Female Population
+122 - 129      Projected Asian and Pacific Islander
+               Hispanic Male Population
+130 - 137      Projected Asian and Pacific Islander
+               Hispanic Female Population
+
+Within a State Population Projections data file, the population
+counts corresponding to Projection Series A appear first,
+followed by the population counts corresponding to Projection
+Series B.  Within each projection series, the rows are sorted by
+year of age.
+
+
+
+
+The format for the Components of Change data file follows below:
+
+01 - 02        State Postal Abbreviation Code
+     03        Projection Series Code (A or B)
+                (Note: Series A is the preferred series --
+                recommended series)
+04 - 07        Year (1995 to 2025)
+     08        Race (1 to 4)
+                (1) White,
+                (2) Black,
+                (3) American Indian, Eskimo, and Aleut,
+                (4) Asian and Pacific Islander.
+     09        Hispanic Origin (1 or 2)
+                (1) non-Hispanic
+                (2) Hispanic
+     10        Sex (1 or 2)
+                (1) Male,
+                (2) Female.
+11 - 18        Number of Projected Births
+19 - 26        Number of Projected Deaths
+27 - 34        Projected Domestic In-migration Count
+35 - 42        Projected Domestic Out-migration Count
+43 - 50        Projected International Immigration Count
+51 - 58        Projected International Emigration Count
+
+Within the Components of Change data file, the population counts
+corresponding to Projection Series A appear first, followed by
+the population counts corresponding to Projection Series B. 
+Within each projection series, the rows are sorted by the three
+demographic characteristics - race (primary), Hispanic origin
+(secondary), and sex (tertiary).  There is no age information
+available in this file structure.
+
